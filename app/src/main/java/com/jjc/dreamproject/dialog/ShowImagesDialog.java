@@ -41,6 +41,7 @@ public class ShowImagesDialog extends Dialog {
         this.mTitles = title;
         initView();
         initData();
+
     }
 
     private void initView() {
