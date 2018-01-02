@@ -152,12 +152,12 @@ public  class GridAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     //自定义ViewHolder，用于加载图片
     class MyViewHolder extends RecyclerView.ViewHolder
     {
-        private ImageView iv;
+        private ImageButton iv;
 
         public MyViewHolder(View view)
         {
             super(view);
-            iv = (ImageView) view.findViewById(R.id.iv);
+            iv = (ImageButton) view.findViewById(R.id.iv);
         }
     }
 
