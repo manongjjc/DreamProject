@@ -169,6 +169,7 @@ public class MovieActivity extends BaseActivity<MovieContract.Presenter> impleme
             currentMedia = size-1;
         MediaBean mediaBean = beanList.get(currentMedia);
         moview_play_titile.setText(mediaBean.getTitle());
+        Log.d("JYD",mediaBean.getUrl());
         movie_super_player.play(mediaBean.getUrl()==null?"http://ws.stream.qqmusic.qq.com/1913719.m4a?fromtag=46":mediaBean.getUrl());//开始播放视频
     }
     /**

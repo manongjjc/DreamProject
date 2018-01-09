@@ -283,11 +283,11 @@ public class MusicPlayActivity extends BaseActivity<MusicPlayContract.Presenter>
     }
 
     @Override
-    public void onBackPressed() {
+    public void onBackPressedSupport() {
         if (view_super_player != null && view_super_player.onBackPressed()) {
             return;
         }
-        super.onBackPressed();
+        super.onBackPressedSupport();
     }
 
     @Override

@@ -396,11 +396,11 @@ public class MusicPlayStoreActivity extends BaseActivity<MusicPlayStoreContract.
     }
 
     @Override
-    public void onBackPressed() {
+    public void onBackPressedSupport() {
         if (view_super_player != null && view_super_player.onBackPressed()) {
             return;
         }
-        super.onBackPressed();
+        super.onBackPressedSupport();
     }
 
     @Override
