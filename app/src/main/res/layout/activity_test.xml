@@ -1,9 +1,26 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    <FrameLayout
-        android:id="@+id/test_fragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/myScrollingContent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-</LinearLayout>
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/test_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <com.roughike.bottombar.BottomBar
+        android:layout_width="match_parent"
+        android:id="@+id/bottomBar"
+        app:bb_behavior="shifting|shy"
+        app:bb_tabXmlResource="@xml/bottombar_menu"
+        android:layout_gravity="bottom"
+        android:layout_height="60dp">
+    </com.roughike.bottombar.BottomBar>
+</android.support.design.widget.CoordinatorLayout>

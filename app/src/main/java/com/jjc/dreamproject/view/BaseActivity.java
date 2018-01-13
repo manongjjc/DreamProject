@@ -174,9 +174,41 @@ public class BaseActivity<T extends BaseContract.Presenter> extends MPermissions
     /****************************************以下为可选方法(Optional methods)******************************************************/
 
     // 选择性拓展其他方法
-
+    /**
+     * 加载根Fragment, 即Activity内的第一个Fragment 或 Fragment内的第一个子Fragment
+     */
     public void loadRootFragment(int containerId, @NonNull ISupportFragment toFragment) {
         mDelegate.loadRootFragment(containerId, toFragment);
+    }
+
+    public void loadRootFragment(int containerId, ISupportFragment toFragment, boolean addToBackStack, boolean allowAnimation){
+        mDelegate.loadRootFragment(containerId,toFragment,addToBackStack,allowAnimation);
+    }
+    /**
+     * 加载多个同级根Fragment,类似Wechat, QQ主页的场景
+     */
+    public void loadMultipleRootFragment(int containerId, int showPosition, ISupportFragment... toFragments){
+        mDelegate.loadMultipleRootFragment(containerId,showPosition,toFragments);
+    }
+    /**
+     * show一个Fragment,hide其他同栈所有Fragment
+     * 使用该方法时，要确保同级栈内无多余的Fragment,(只有通过loadMultipleRootFragment()载入的Fragment)
+     * <p>
+     * 建议使用更明确的#showHideFragment(ISupportFragment, ISupportFragment)}
+     *
+     *  showFragment 需要show的Fragment
+     */
+    public void showHideFragment(ISupportFragment showFragment){
+        mDelegate.showHideFragment(showFragment);
+    }
+    /**
+     * show一个Fragment,hide一个Fragment ; 主要用于类似微信主页那种 切换tab的情况
+     *
+     * @param showFragment 需要show的Fragment
+     * @param hideFragment 需要hide的Fragment
+     */
+    public void showHideFragment(ISupportFragment showFragment, ISupportFragment hideFragment){
+        mDelegate.showHideFragment(showFragment, hideFragment);
     }
 
     public void start(ISupportFragment toFragment) {

@@ -12,21 +12,22 @@ import com.jjc.dreamproject.R;
 import me.yokeyword.fragmentation.SupportFragment;
 
 
-public class TestFragment extends SupportFragment {
+public class NewTestFragment extends SupportFragment {
 
 
-    public TestFragment() {
+    public NewTestFragment() {
         // Required empty public constructor
     }
 
-    private TestFragment newInstance(){
-        return new TestFragment();
+    private NewTestFragment newInstance() {
+        return new NewTestFragment();
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_test, container, false);
+        View view = inflater.inflate(R.layout.fragment_newtest, container, false);
         initView(view);
         return view;
     }
@@ -34,15 +35,32 @@ public class TestFragment extends SupportFragment {
     @Override
     public void onLazyInitView(@Nullable Bundle savedInstanceState) {
         super.onLazyInitView(savedInstanceState);
+        if (savedInstanceState != null) {
+            //data recovery
+        }
+
     }
 
     private void initView(View view) {
-        view.findViewById(R.id.test_image).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startWithPop(newInstance());
-            }
-        });
+
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        //The exception status data is saved.
+    }
+
+    @Override
+    public void onSupportVisible() {
+        super.onSupportVisible();
+        //fragment  show
+    }
+
+    @Override
+    public void onSupportInvisible() {
+        super.onSupportInvisible();
+        //fragment hide
+    }
 }
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_recents"
+        title="Recents"
+        icon="@drawable/ic_movie_first"
+        barColorWhenSelected="#FE3D81"
+        />
+    <tab
+        id="@+id/tab_favorites"
+        title="Favorites"
+        icon="@drawable/ic_audio_first"
+        barColorWhenSelected="#5D3C35"
+        />
+    <tab
+        id="@+id/tab_nearby"
+        title="Nearby"
+        icon="@drawable/ic_favorite"
+        barColorWhenSelected="#7B1FA2"
+        />
+    <tab
+        id="@+id/tab_friends"
+        title="Friends"
+        icon="@drawable/ic_photo_first"
+        barColorWhenSelected="#FF5252"
+        />
+    <tab
+        id="@+id/tab_restaurants"
+        title="Restaurants"
+        icon="@drawable/ic_repeat_one"
+        barColorWhenSelected="#FF9800"
+        />
+</tabs>
+
