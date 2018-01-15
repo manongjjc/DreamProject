@@ -1,11 +1,11 @@
-package com.jjc.dreamproject.contract;
+package com.jjc.dreamproject.contract.register;
 
-import com.jjc.dreamproject.presenter.RegisterPresenter;
+import com.jjc.dreamproject.contract.BaseContract;
 
 public interface RegisterContract {
 
     interface Model {
-        void regist(String name, String pathword, RegisterPresenter registerPresenter);
+        void regist(String name, String pathword);
     }
 
     interface View extends BaseContract.View {

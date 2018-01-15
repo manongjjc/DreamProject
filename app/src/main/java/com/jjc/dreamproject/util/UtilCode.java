@@ -10,4 +10,6 @@ public class UtilCode {
     public static int EXACT_SCREEN_WIDTH = 480;
     public static final String SEARCH_HISTORY = "hitory";
     public static final String MusicPlayTylp = "music_tylp";
+    public static final int RESULT_OK = 101;
+    public static final int REQ_CODE = 100;
 }

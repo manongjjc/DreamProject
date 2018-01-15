@@ -222,6 +222,11 @@ public class BaseActivity<T extends BaseContract.Presenter> extends MPermissions
         mDelegate.start(toFragment, launchMode);
     }
 
+    public void startForResult(ISupportFragment toFragment,int requestCode){
+        mDelegate.startForResult(toFragment,requestCode);
+    }
+
+
     /**
      * Pop the fragment.
      */

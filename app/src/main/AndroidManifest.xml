@@ -35,19 +35,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".view.MainActivity"
-            android:theme="@style/Theme_Animation">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".view.photo.PhotoShowActivity"
-            android:theme="@style/Theme_Animation" />
-        <activity
-            android:name=".view.RegisterActivity"
             android:theme="@style/Theme_Animation" />
         <activity
             android:name=".view.photo.StoreActivity"
@@ -73,6 +61,15 @@
         <activity
             android:name=".view.movie.MovieActivity"
             android:theme="@style/Theme_Animation" />
+        <activity
+            android:name=".view.LoginActivity"
+            android:theme="@style/Theme_Animation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
