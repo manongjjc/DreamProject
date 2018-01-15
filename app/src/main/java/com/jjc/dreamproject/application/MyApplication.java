@@ -17,11 +17,11 @@ public class MyApplication extends Application{
     public void onCreate() {
         super.onCreate();
         CrashReport.initCrashReport(getApplicationContext(), "1885796a71", true);
-        Fragmentation.builder()
-                // 显示悬浮球 ; 其他Mode:SHAKE: 摇一摇唤出   NONE：隐藏
-                .stackViewMode(Fragmentation.BUBBLE)
-                .debug(BuildConfig.DEBUG)
-                .install();
+//        Fragmentation.builder()
+//                // 显示悬浮球 ; 其他Mode:SHAKE: 摇一摇唤出   NONE：隐藏
+//                .stackViewMode(Fragmentation.BUBBLE)
+//                .debug(BuildConfig.DEBUG)
+//                .install();
 
     }
 }
